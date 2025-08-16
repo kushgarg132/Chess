@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Chess</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Default WebSocket backend when opening this file via file:// -->
+  <meta name="ws-base" content="ws://localhost:8080">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Online Chess</h1>
+      <div class="controls">
+        <input id="name" type="text" placeholder="Your name">
+        <input id="room" type="text" placeholder="Room ID" />
+        <button id="connect">Connect</button>
+      </div>
+      <div id="status">Disconnected</div>
+    </header>
+    <main>
+      <div id="board" class="board"></div>
+      <aside class="sidebar">
+        <div class="info">
+          <div><strong>Your role:</strong> <span id="role">-</span></div>
+          <div><strong>Turn:</strong> <span id="turn">-</span></div>
+        </div>
+        <div id="messages" class="messages"></div>
+      </aside>
+    </main>
+    <footer>
+      Built with Jakarta EE WebSockets. No en passant/castling (yet).
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
